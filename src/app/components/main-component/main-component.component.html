@@ -1,0 +1,18 @@
+<p [ngClass]="color?'glow':''">main-component works!</p>
+<input type="number" name="textt" [(ngModel)]="count" placeholder="enter btn name">
+
+<input type="number" name="text1" [(ngModel)]="count1" placeholder="enter btn name">
+<button *ngIf="!color">yes</button>
+
+<button *ngIf="color">no</button>
+
+
+
+<button (click)="onclock()">{{name | uppercase}}</button>
+
+<h1>name:{{data?.name}}</h1>
+<h1>Date : {{date}}</h1>
+<h1>Date : {{date | date:'MM/dd/yyyy'}}</h1>
+<app-secound [data]="parentData" (click)="parentFunction($event)">
+
+</app-secound>
