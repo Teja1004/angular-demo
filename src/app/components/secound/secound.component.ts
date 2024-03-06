@@ -22,6 +22,9 @@ export class SecoundComponent {
   onClick() {
     this.click.emit(this.childData);
     this.service.display();
+    this.service.getData().subscribe((data: any) => {
+      console.log("get data from server-->", data)
+    })
   }
 
 

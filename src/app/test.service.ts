@@ -19,7 +19,7 @@ export class TestService {
   }
 
   getData() {
-    return this.http.get(`http://3.141.22.25:8080/api/v1/29/stripe/customer/customer-details`);
+    return this.http.get(`https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8`);
   }
 
 }
