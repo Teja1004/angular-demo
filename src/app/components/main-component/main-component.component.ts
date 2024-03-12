@@ -14,6 +14,11 @@ export class MainComponentComponent {
   date: Date = new Date;
   color: boolean = false;
   data: any;
+  userData: any = {
+    name: "string",
+    age: "number"
+  };
+
   parentData: any[] = ["name", "id"];
 
   constructor(private service: TestService) { }
@@ -24,8 +29,11 @@ export class MainComponentComponent {
 
 
   onclock() {
-    console.log("button clicked-->", this.count);
+    console.log("button clicked-->", this.userData);
     this.color = true;
+    this.service.postData(this.userData).subscribe((Response: any) => {
+      console.log("data post done", Response)
+    })
     console.log(this.service.displayOutput(this.count, this.count1))
   }
 

@@ -12,7 +12,7 @@ export class SecoundComponent {
   @Input() data: any[] = [];
   @Output() click = new EventEmitter<any>();
   childData: String = "child data";
-
+  getdata: any;
   constructor(private service: TestService) { }
 
   ngOnInit() {
@@ -24,6 +24,7 @@ export class SecoundComponent {
     this.service.display();
     this.service.getData().subscribe((data: any) => {
       console.log("get data from server-->", data)
+      this.getdata = data;
     })
   }
 

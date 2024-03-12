@@ -21,5 +21,9 @@ export class TestService {
   getData() {
     return this.http.get(`http://localhost:3000/users`);
   }
+  postData(data: any) {
+    return this.http.post(`http://localhost:3000/users`, data);
+  }
+
 
 }

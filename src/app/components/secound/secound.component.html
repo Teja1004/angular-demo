@@ -1,3 +1,15 @@
 <p>secound works!</p>
 
 <button (click)="onClick()">child</button>
+<table>
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+    </thead>
+    <tbody *ngFor="let data of getdata">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+    </tbody>
+</table>
